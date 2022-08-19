@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {background-color: rgb(0, 0, 0);}
+            h1 {text-align: center;}
+            h2 {text-align: center;}
+
+            .div2 {text-align: center;}
+            
+            .container {
+                background-color: rgb(218, 23, 23);
+                 height: 500px;
+                 width: 390px;
+                 border: 5px solid black;
+                 border-right: 100;
+                 margin-top: 100px;
+                 margin-left: 750px;
+                 padding: 10px;
+                }
+        </style>
+    </head>
+    <body>
+        <h1 style="color: Blue;"><em>Credit Card Default Prediction</em></h1>
+        <div>
+            <form method="post" action="/predict" class="container">
+                <h2 style="color: rgb(0, 0, 0);">Defaulter Prediction</h2>
+                <input type="number" name = "LIMIT_BAL" placeholder="Balance Limit" required="required" style="width:379px"><br><br>
+                <input type="text" name = "SEX" placeholder="Sex" required="required" size= "50px"><br><br>
+                <input type="text" name = "EDUCATION" placeholder="Education" required="required" size= "50px"><br><br>
+                <input type="text" name = "MARRIAGE" placeholder="Marriage" required="required" size= "50px"><br><br>
+                <input type="number" name = "AGE" placeholder="Age" required="required" style="width:379px " ><br><br>
+                <input type="text" name = "PAY_1" placeholder="Pay1" required="required" size= "50px"><br><br>
+                <input type="text" name = "PAY_2" placeholder="Pay2" required="required" size= "50px"><br><br>
+                <input type="text" name = "PAY_3" placeholder="Pay3" required="required" size= "50px"><br><br>
+                <input type="number" name = "TOTAL_BILL_AMT" placeholder="Total bill amount till 6 month" required="required" style="width:379px"><br><br>
+                <input type="number" name = "TOTAL_PAY_AMT" placeholder="Total payment amount till 6 month" required="required" style="width:379px"><br><br>
+                <button>Submit</button>
+
+                <br>
+                <div class="div2" style="color: rgb(31, 1, 114) ;">
+                   <b style="font-size: 20px;"> {{data}} </b>
+                </div>
+        </div>
+    </body>
+</html>
