@@ -8,11 +8,11 @@ warnings.filterwarnings('ignore')
 app = Flask(__name__)
 model = joblib.load('model.pkl')
 
-@app.route('/')
+@app.route('/',methods=['POST','GET'])
 def home():
     return render_template('home.html')
 
-@app.route('/predict',methods=['POST'])
+@app.route('/predict',methods=['POST','GET'])
 def predict():
     LIMIT_BAL = request.form.get('LIMIT_BAL')
     SEX = request.form.get('SEX')
